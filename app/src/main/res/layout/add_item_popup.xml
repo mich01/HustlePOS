@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/alert_dialog_bg">
+
+    <ImageView
+        android:id="@+id/add_item_banner"
+        android:src="@drawable/add_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lbl_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/add_item_banner"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/itn"
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:hint="@string/enter_item_name"
+        app:hintTextColor="@color/hint_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_status">
+
+    <EditText
+        android:id="@+id/txt_item_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:inputType="textAutoComplete"
+        app:layout_editor_absoluteX="-28dp"
+        android:background="@drawable/input_text_dimensions"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_status" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ptcp"
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:hint="@string/enter_purchase_price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itn">
+
+    <EditText
+        android:id="@+id/txt_purchase_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:textSize="24sp"
+        app:layout_editor_absoluteX="-28dp"
+        android:background="@drawable/input_text_dimensions"
+        app:layout_constraintTop_toBottomOf="@+id/txt_item_name"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/sp"
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:hint="@string/enter_selling_price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ptcp">
+
+    <EditText
+        android:id="@+id/txt_selling_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_marginTop="20dp"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        app:layout_editor_absoluteX="-28dp"
+        android:background="@drawable/input_text_dimensions"
+        app:layout_constraintTop_toBottomOf="@+id/sp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/qty"
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:hint="@string/enter_quantity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sp">
+
+        <EditText
+            android:id="@+id/txt_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:background="@drawable/input_text_dimensions"
+            app:layout_constraintTop_toBottomOf="@+id/txt_selling_price"
+            app:layout_editor_absoluteX="-28dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/cmd_save_record"
+        android:layout_width="140dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/add_item_button_design"
+        android:text="@string/save_and_add"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.939"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/qty" />
+
+
+    <Button
+        android:id="@+id/cmd_delete_item"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/delete_item"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/delete_record_button_design"
+        app:layout_constraintTop_toBottomOf="@+id/cmd_cancel" />
+
+    <Button
+        android:id="@+id/cmd_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/md_cancel"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.022"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/qty"
+        android:background="@drawable/cancel_button_design"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

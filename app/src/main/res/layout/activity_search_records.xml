@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:accessibilityPaneTitle="Select Start and end dates"
+    tools:context="com.mich01.hustlepos.UI.Sales.Search_Records">
+
+  <CalendarView
+      android:id="@+id/start_date"
+      android:layout_width="wrap_content"
+      android:layout_height="283dp"
+      android:layout_alignParentTop="true"
+      android:layout_centerHorizontal="true"
+      android:background="@color/light_pink"
+      android:tooltipText="Select Start Date"
+      android:layout_gravity="center" />
+
+  <CalendarView
+      android:id="@+id/end_date"
+      android:layout_width="wrap_content"
+      android:layout_height="310dp"
+      android:layout_below="@+id/start_date"
+      android:layout_centerHorizontal="true"
+      android:layout_gravity="center"
+      android:background="@color/light_pink"
+      android:layout_marginTop="28dp"
+      android:maxDate="" />
+
+  <Button
+      android:id="@+id/cmd_advanced_search"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/end_date"
+      android:layout_marginTop="24dp"
+      android:text="Search Sold Items"/>
+
+</RelativeLayout>

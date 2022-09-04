@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mich01.hustlepos.UI.Sales.ViewSales">
+
+
+    <ListView
+        android:scrollbars="vertical"
+        android:id="@+id/all_sales"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:divider="@android:color/transparent"
+        android:paddingTop="5dp"
+        android:dividerHeight="5dp">
+    </ListView>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/total_items_sold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:fabCradleMargin="5dp"
+        app:fabCradleRoundedCornerRadius="8dp"
+        app:navigationContentDescription="Total"
+        android:layout_gravity="bottom">
+        <TextView
+            android:id="@+id/total_transactions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:textStyle="bold"
+            android:text="Total Sales" />
+        <TextView
+            android:id="@+id/total_profits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:paddingRight="5dp"
+            android:layout_gravity="right|end"
+            android:text="Total Profits" />
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/close_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        app:srcCompat="@drawable/ic_baseline_check_circle_24" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

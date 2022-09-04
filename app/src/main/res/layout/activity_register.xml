@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#443850"
+    android:orientation="vertical"
+    tools:context="com.mich01.hustlepos.UI.Setup.RegisterActivity">
+
+    <TextView
+        android:id="@+id/register_me"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="44dp"
+        android:text="@string/register_me"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtmail"
+        android:layout_width="350dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="32dp"
+        android:hint="@string/enter_email"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_me">
+
+        <EditText
+            android:id="@+id/txt_email"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_text_dimensions"
+            android:ems="10"
+
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/register_me" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtphone"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_phone"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtmail">
+        <EditText
+            android:id="@+id/txt_phone_no"
+            android:layout_width="350dp"
+            android:layout_height="62dp"
+            android:ems="10"
+            android:layout_marginTop="32dp"
+            android:inputType="phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/input_text_dimensions"
+            app:layout_constraintTop_toBottomOf="@+id/txtphone" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtpasswd"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/create_password"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtphone">
+
+        <EditText
+            android:id="@+id/txt_password"
+            android:layout_width="350dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/input_text_dimensions"
+            android:ems="10"
+            android:inputType="numberPassword"
+            android:maxLength="4"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_phone_no" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtconfirm"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/confirm_password"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtpasswd">
+        <EditText
+            android:id="@+id/txt_confirm_password"
+            android:layout_width="350dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="32dp"
+            android:textAlignment="center"
+            android:ems="10"
+            android:maxLength="4"
+            android:inputType="numberPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/input_text_dimensions"
+            app:layout_constraintTop_toBottomOf="@+id/txt_password" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/cmd_register"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="76dp"
+        android:text="@string/register_me_btn"
+        android:textSize="20sp"
+        android:background="@drawable/add_item_button_design"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtconfirm" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
